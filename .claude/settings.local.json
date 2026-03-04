@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /Users/fukaborishuki/Desktop/ClaudeCode0304/frontend && npm create vite@latest . -- --template react-ts --yes 2>&1 | head -20 || echo \"vite setup might need manual init\")",
+      "Bash(npm install && npm install react-router-dom axios @tanstack/react-query date-fns 2>&1 | tail -5)",
+      "Bash(cd /Users/fukaborishuki/Desktop/ClaudeCode0304/backend && go mod tidy 2>&1)",
+      "Bash(go build ./... 2>&1)",
+      "Bash(cd /Users/fukaborishuki/Desktop/ClaudeCode0304/frontend && npm run build 2>&1 | tail -20)",
+      "Bash(npm run build 2>&1 | tail -20)",
+      "Bash(cd /Users/fukaborishuki/Desktop/ClaudeCode0304/backend && go test ./utils/... -v 2>&1)",
+      "Bash(cd /Users/fukaborishuki/Desktop/ClaudeCode0304/backend && go mod tidy && go test ./utils/... -v 2>&1)",
+      "Bash(cd /Users/fukaborishuki/Desktop/ClaudeCode0304/frontend && npm install -D vitest jsdom @vitest/coverage-v8 2>&1 | tail -5)",
+      "Bash(npm test 2>&1)",
+      "Bash(npm install -D happy-dom 2>&1 | tail -3)",
+      "Bash(cd /Users/fukaborishuki/Desktop/ClaudeCode0304/backend && go test ./... -v 2>&1)",
+      "Bash(go build ./... 2>&1 && echo \"BACKEND BUILD: SUCCESS\" && cd /Users/fukaborishuki/Desktop/ClaudeCode0304/frontend && npm run build 2>&1 | tail -5 && echo \"FRONTEND BUILD: SUCCESS\")",
+      "Bash(npm run build 2>&1 | tail -10)",
+      "Bash(cd /Users/fukaborishuki/Desktop/ClaudeCode0304 && echo \"\" && echo \"===== 最終テスト結果 =====\" && echo \"\" && echo \"[バックエンド テスト]\" && go test ./backend/... -v 2>&1 && echo \"\" && echo \"[フロントエンド テスト]\" && npm --prefix frontend test 2>&1 && echo \"\" && echo \"[バックエンド ビルド]\" && go build ./backend/... 2>&1 && echo \"✓ バックエンドビルド成功\" && echo \"\" && echo \"[フロントエンド ビルド]\" && npm --prefix frontend run build 2>&1 | tail -5 && echo \"\" && echo \"===== 全テスト・ビルド 完了 - 問題なし =====\")",
+      "Bash(cd /Users/fukaborishuki/Desktop/ClaudeCode0304/backend && echo \"===== 最終テスト結果 =====\" && echo \"\" && echo \"[バックエンド テスト]\" && go test ./... -v 2>&1 | tail -15 && echo \"\" && echo \"[バックエンド ビルド]\" && go build ./... 2>&1 && echo \"✓ バックエンドビルド成功\" && echo \"\" && echo \"[フロントエンド テスト]\" && cd ../frontend && npm test 2>&1 | tail -10 && echo \"\" && echo \"[フロントエンド ビルド]\" && npm run build 2>&1 | tail -5 && echo \"\" && echo \"===== 全テスト・ビルド 完了 - 問題なし =====\")",
+      "Bash(python3 -m json.tool)",
+      "Bash(sudo ln -sf /Applications/Docker.app/Contents/Resources/bin/docker-credential-desktop /usr/local/bin/docker-credential-desktop && echo \"シンボリックリンク作成成功\" && which docker-credential-desktop)",
+      "Bash(python3 -c \"\nimport json\nwith open\\('/Users/fukaborishuki/.docker/config.json', 'r'\\) as f:\n    config = json.load\\(f\\)\nprint\\('現在の設定:', json.dumps\\(config, indent=2\\)\\)\nprint\\('auths は空:', not config.get\\('auths'\\)\\)\n\")",
+      "Bash(cd /Users/fukaborishuki/Desktop/ClaudeCode0304 && docker compose build 2>&1)",
+      "Bash(docker compose up 2>&1)",
+      "Bash(lsof -i :8080 -P -n 2>/dev/null | head -10)",
+      "Bash(lsof -i :3000 -P -n 2>/dev/null | head -5)"
+    ]
+  }
+}
